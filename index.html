@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Segredo da Beleza Coreana — Guia de Skincare Natural + 100 Receitas</title>
+  <meta
+    name="description"
+    content="Descubra o método K-Beauty de pele de vidro (glass skin) sem gastar uma fortuna. Rotinas completas, 7 erros silenciosos, produtos acessíveis e +100 receitas coreanas em PDF."
+  />
+
+  <!-- Google Fonts: Cormorant Garamond (Títulos) + Plus Jakarta Sans (Textos e Botões) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuração de Paleta e Tipografia Botânica K-Beauty no Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#F8F6F1',
+            sage: {
+              light: '#E4EDE2',
+              mid: '#DCE8D9',
+              border: '#C9DAC5',
+            },
+            forest: {
+              DEFAULT: '#1B352C',
+              soft: '#355449',
+              muted: '#516B61',
+            },
+            champagne: {
+              DEFAULT: '#C59B5F',
+              light: '#E8D8BE',
+            },
+            cta: {
+              DEFAULT: '#15803D',
+              hover: '#166534',
+            },
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 14px 38px -12px rgba(27, 53, 44, 0.10)',
+            cta: '0 14px 28px -8px rgba(21, 128, 61, 0.42)',
+            book: '18px 22px 42px -12px rgba(27, 53, 44, 0.32), -4px 4px 14px rgba(27, 53, 44, 0.08)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Estilos Complementares (Mockup 3D do E-book, Brilho Suave no CTA e Animações de Entrada) -->
+  <style>
+    body {
+      background-color: #F8F6F1;
+      color: #1B352C;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Efeito de brilho suave deslizante nos botões principais de compra */
+    .btn-sheen {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-sheen::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 65%;
+      height: 100%;
+      background: linear-gradient(
+        110deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.24) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-20deg);
+      animation: sheenMove 4.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes sheenMove {
+      0%, 55% { left: -120%; }
+      100% { left: 160%; }
+    }
+
+    /* Mockup 3D realista de livro/e-book */
+    .book-scene {
+      perspective: 1200px;
+    }
+    .book-3d {
+      position: relative;
+      transform: rotateY(-12deg) rotateX(2deg);
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .book-3d:hover {
+      transform: rotateY(-4deg) rotateX(0deg) translateY(-4px);
+    }
+    /* Lombada lateral sutil */
+    .book-spine {
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      left: -12px;
+      width: 14px;
+      background: linear-gradient(90deg, #152b23 0%, #274a3e 65%, #1B352C 100%);
+      border-radius: 6px 0 0 6px;
+      transform: skewY(-6deg);
+      box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.25);
+    }
+    /* Páginas laterais à direita */
+    .book-pages {
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      right: -8px;
+      width: 10px;
+      background: repeating-linear-gradient(
+        90deg,
+        #f2eee5 0px,
+        #f2eee5 1.5px,
+        #dfd9cc 1.5px,
+        #dfd9cc 3px
+      );
+      border-radius: 0 6px 6px 0;
+      border-top: 1px solid #d5cebe;
+      border-right: 1px solid #d5cebe;
+      border-bottom: 1px solid #d5cebe;
+    }
+
+    /* Animação sutil de entrada ao rolar a página */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Rotação suave da seta dos acordeões */
+    .accordion-chevron {
+      transition: transform 0.25s ease;
+    }
+    .accordion-btn[aria-expanded="true"] .accordion-chevron {
+      transform: rotate(180deg);
+    }
+
+    /* Respeito à preferência de movimento reduzido */
+    @media (prefers-reduced-motion: reduce) {
+      .btn-sheen::after { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .book-3d { transform: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-ivory text-forest overflow-x-hidden pb-24 md:pb-0">
+  <!-- =====================================================================
+       1. FAIXA SUPERIOR DE AVISO (TOP BAR)
+  ====================================================================== -->
+  <div class="bg-forest text-ivory text-center px-4 py-2.5 text-xs sm:text-sm font-medium tracking-wide border-b border-champagne/30">
+    <span class="inline-flex items-center justify-center gap-1.5 flex-wrap">
+      <span aria-hidden="true">✨</span>
+      <span>Oferta de Lançamento • Acesso imediato em PDF no seu e-mail via Pix ou Cartão</span>
+    </span>
+  </div>
+
+  <!-- =====================================================================
+       2. HERO SECTION (PRIMEIRA DOBRA OTIMIZADA PARA CELULAR)
+  ====================================================================== -->
+  <header id="hero" class="relative overflow-hidden bg-gradient-to-b from-sage-light/70 via-ivory to-ivory pt-8 pb-14 sm:pt-12 sm:pb-20">
+    <!-- Decoração botânica sutil no fundo -->
+    <div class="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-sage-mid/60 blur-3xl"></div>
+    <div class="pointer-events-none absolute top-1/2 -left-24 w-64 h-64 rounded-full bg-champagne-light/40 blur-3xl"></div>
+
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Coluna de Copy Principal -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <!-- Selo K-Beauty -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-champagne/50 shadow-sm mb-5">
+            <span class="w-2 h-2 rounded-full bg-cta"></span>
+            <span class="text-[11px] sm:text-xs font-bold tracking-[0.14em] uppercase text-forest">
+              Método K-Beauty • Pele de Vidro (Glass Skin)
+            </span>
+          </div>
+
+          <!-- Headline Principal -->
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[3.45rem] font-bold leading-[1.08] tracking-tight text-forest mb-4">
+            O Segredo da Pele de Vidro Coreana —
+            <span class="italic font-semibold text-forest-soft">Sem Gastar uma Fortuna</span> em Clínicas ou Importados
+          </h1>
+
+          <!-- Subheadline Clara -->
+          <p class="text-base sm:text-lg text-forest-muted leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-7">
+            Descubra a rotina simples, segura e acessível que transforma a textura e o viço natural do seu rosto no dia a dia — com
+            <strong class="text-forest font-semibold">+100 receitas coreanas naturais</strong>, plano prático de 28 dias e lista pronta de produtos recomendados.
+          </p>
+
+          <!-- Mockup da Capa no Mobile (aparece entre a copy e o preço em telas pequenas para aumentar o desejo antes do clique) -->
+          <div class="lg:hidden flex justify-center my-8">
+            <!-- O mesmo bloco de mockup é mantido sincronizado via container dedicado para mobile/desktop -->
+            <div class="book-scene w-64 sm:w-72">
+              <div class="book-3d rounded-2xl shadow-book">
+                <div class="book-spine" aria-hidden="true"></div>
+                <div class="book-pages" aria-hidden="true"></div>
+
+                <!-- Container da Capa (tenta carregar capa.jpg; ativa fallback SVG/CSS se não existir) -->
+                <div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-ivory border border-sage-border">
+                  <img
+                    src="capa.jpg"
+                    alt="Capa do E-book O Segredo da Beleza Coreana — Guia Completo de Skincare Natural, Rotinas e Glow + 100 Receitas Coreanas"
+                    class="js-cover-img w-full h-full object-cover block"
+                    onerror="handleCoverFallback(this)"
+                  />
+
+                  <!-- Fallback Vetorial/CSS Minimalista K-Beauty (exibido automaticamente se capa.jpg não carregar) -->
+                  <div class="js-cover-fallback hidden absolute inset-0 bg-[#F7F4EC] p-4 flex flex-col justify-between text-center select-none">
+                    <!-- Moldura fina botânica -->
+                    <div class="w-full h-full rounded-xl border border-forest/30 p-4 flex flex-col justify-between relative overflow-hidden bg-gradient-to-b from-[#FAF8F2] via-[#F4F7F1] to-[#E6EFE4]">
+                      <!-- Detalhe de folhas botânicas SVG no canto superior -->
+                      <svg class="absolute -top-3 -right-3 w-24 h-24 text-forest/15 pointer-events-none" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                        <path d="M98 16C74 20 56 38 50 64C74 60 94 42 98 16Z" fill="currentColor" />
+                        <path d="M98 16C80 34 65 49 48 68" stroke="#1B352C" stroke-opacity="0.28" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="34" cy="30" r="5" stroke="#C59B5F" stroke-opacity="0.55" stroke-width="1.4" />
+                      </svg>
+
+                      <!-- Cabeçalho da Capa -->
+                      <div class="relative z-10 pt-1">
+                        <p class="text-[9px] font-bold tracking-[0.22em] uppercase text-champagne mb-2">Método K-Beauty</p>
+                        <h2 class="font-serif text-[1.45rem] leading-[1.08] font-bold text-forest tracking-tight">
+                          O SEGREDO DA<br />BELEZA COREANA
+                        </h2>
+                        <div class="w-10 h-[1.5px] bg-champagne/70 mx-auto my-2.5"></div>
+                        <p class="text-[11px] leading-snug text-forest-soft font-medium px-1">
+                          Guia Completo de Skincare Natural, Rotinas e Glow
+                        </p>
+                      </div>
+
+                      <!-- Ilustração central botânica (Centella + Gotas de Glass Skin) -->
+                      <div class="relative z-10 my-2 flex items-center justify-center">
+                        <svg class="w-28 h-28" viewBox="0 0 140 140" fill="none" aria-hidden="true">
+                          <circle cx="70" cy="70" r="52" fill="#DCE8D9" fill-opacity="0.7" />
+                          <circle cx="70" cy="70" r="42" stroke="#C59B5F" stroke-opacity="0.45" stroke-dasharray="3 4" stroke-width="1.2" />
+                          <!-- Folha esquerda -->
+                          <path d="M70 96C52 92 40 76 42 56C58 58 69 72 70 96Z" fill="#5D8A6B" fill-opacity="0.82" />
+                          <path d="M70 96C58 82 51 70 46 60" stroke="#1B352C" stroke-opacity="0.4" stroke-width="1.2" stroke-linecap="round" />
+                          <!-- Folha direita -->
+                          <path d="M70 96C88 90 100 72 96 52C80 56 70 72 70 96Z" fill="#2E5A44" fill-opacity="0.88" />
+                          <path d="M70 96C81 80 88 68 92 58" stroke="#F8F6F1" stroke-opacity="0.45" stroke-width="1.2" stroke-linecap="round" />
+                          <!-- Gota central Glass Skin -->
+                          <path d="M70 30C70 30 57 48 57 57C57 64.2 62.8 70 70 70C77.2 70 83 64.2 83 57C83 48 70 30 70 30Z" fill="#FFFFFF" fill-opacity="0.92" stroke="#1B352C" stroke-opacity="0.25" stroke-width="1.4" />
+                          <path d="M65 55C65 51 67.5 47.5 70 44" stroke="#C59B5F" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                      </div>
+
+                      <!-- Selo inferior + 100 Receitas -->
+                      <div class="relative z-10 pb-1">
+                        <span class="inline-block px-3 py-1 rounded-full bg-forest text-ivory text-[10px] font-bold tracking-wider uppercase shadow-sm">
+                          + 100 Receitas Coreanas
+                        </span>
+                        <p class="text-[9px] text-forest-muted mt-2 tracking-wide">Edição Digital em PDF • Acesso Imediato</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloco de Preço + CTA Principal -->
+          <div class="bg-white/95 backdrop-blur-sm border border-sage-border rounded-3xl p-5 sm:p-6 shadow-soft max-w-xl mx-auto lg:mx-0">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-4 mb-4 border-b border-sage-light">
+              <div class="text-center sm:text-left">
+                <span class="inline-block text-xs font-semibold uppercase tracking-wider text-forest-muted">
+                  Oferta Especial em PDF
+                </span>
+                <div class="flex items-baseline justify-center sm:justify-start gap-2.5 mt-0.5">
+                  <span class="text-sm sm:text-base text-forest-muted/80 line-through font-medium">De R$ 47,00</span>
+                  <span class="text-xs font-semibold uppercase text-cta bg-sage-light px-2 py-0.5 rounded-full">-60% OFF</span>
+                </div>
+              </div>
+              <div class="text-center sm:text-right">
+                <p class="text-xs text-forest-muted font-medium">Por apenas</p>
+                <p class="font-serif text-4xl sm:text-[2.7rem] font-bold text-forest leading-none">
+                  R$ 19,00
+                </p>
+                <p class="text-[11px] text-forest-muted mt-1">Pagamento único • Sem mensalidades</p>
+              </div>
+            </div>
+
+            <!-- Botão CTA Principal -->
+            <a
+              href="https://pay.cakto.com.br/38v3qjk_1357210"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-sheen w-full inline-flex items-center justify-center gap-2.5 bg-cta hover:bg-cta-hover active:scale-[0.99] text-white font-extrabold text-base sm:text-lg tracking-wide py-4 px-6 rounded-2xl shadow-cta transition-all duration-200"
+            >
+              <span>QUERO MEU ACESSO AGORA</span>
+              <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+
+            <!-- Micro-selos de Confiança -->
+            <div class="mt-4 flex flex-wrap items-center justify-center sm:justify-between gap-x-4 gap-y-2 text-xs text-forest-muted font-medium">
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-cta shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Acesso Imediato
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-cta shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                </svg>
+                Pix ou Cartão
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-cta shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+                Garantia de 7 Dias
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna da Capa 3D no Desktop -->
+        <div class="hidden lg:flex lg:col-span-5 justify-center">
+          <div class="relative">
+            <!-- Selo flutuante discreto -->
+            <div class="absolute -top-4 -right-4 z-20 bg-white border border-champagne/60 rounded-2xl px-3.5 py-2 shadow-soft text-center">
+              <p class="text-[10px] font-bold uppercase tracking-widest text-champagne">Edição Completa</p>
+              <p class="text-sm font-extrabold text-forest">+100 Receitas</p>
+            </div>
+
+            <div class="book-scene w-80 xl:w-[340px]">
+              <div class="book-3d rounded-2xl shadow-book">
+                <div class="book-spine" aria-hidden="true"></div>
+                <div class="book-pages" aria-hidden="true"></div>
+
+                <!-- Container da Capa Desktop (capa.jpg + fallback SVG/CSS automático) -->
+                <div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-ivory border border-sage-border">
+                  <img
+                    src="capa.jpg"
+                    alt="Capa do E-book O Segredo da Beleza Coreana — Guia Completo de Skincare Natural, Rotinas e Glow + 100 Receitas Coreanas"
+                    class="js-cover-img w-full h-full object-cover block"
+                    onerror="handleCoverFallback(this)"
+                  />
+
+                  <!-- Fallback Vetorial/CSS Minimalista K-Beauty Desktop -->
+                  <div class="js-cover-fallback hidden absolute inset-0 bg-[#F7F4EC] p-5 flex flex-col justify-between text-center select-none">
+                    <div class="w-full h-full rounded-xl border border-forest/30 p-6 flex flex-col justify-between relative overflow-hidden bg-gradient-to-b from-[#FAF8F2] via-[#F4F7F1] to-[#E6EFE4]">
+                      <svg class="absolute -top-3 -right-3 w-28 h-28 text-forest/15 pointer-events-none" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                        <path d="M98 16C74 20 56 38 50 64C74 60 94 42 98 16Z" fill="currentColor" />
+                        <path d="M98 16C80 34 65 49 48 68" stroke="#1B352C" stroke-opacity="0.28" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="34" cy="30" r="5" stroke="#C59B5F" stroke-opacity="0.55" stroke-width="1.4" />
+                      </svg>
+
+                      <div class="relative z-10 pt-1">
+                        <p class="text-[10px] font-bold tracking-[0.24em] uppercase text-champagne mb-2.5">Método K-Beauty</p>
+                        <h2 class="font-serif text-[1.95rem] leading-[1.06] font-bold text-forest tracking-tight">
+                          O SEGREDO DA<br />BELEZA COREANA
+                        </h2>
+                        <div class="w-12 h-[1.5px] bg-champagne/70 mx-auto my-3"></div>
+                        <p class="text-xs leading-relaxed text-forest-soft font-medium px-2">
+                          Guia Completo de Skincare Natural, Rotinas e Glow
+                        </p>
+                      </div>
+
+                      <div class="relative z-10 my-2 flex items-center justify-center">
+                        <svg class="w-36 h-36" viewBox="0 0 140 140" fill="none" aria-hidden="true">
+                          <circle cx="70" cy="70" r="54" fill="#DCE8D9" fill-opacity="0.72" />
+                          <circle cx="70" cy="70" r="44" stroke="#C59B5F" stroke-opacity="0.48" stroke-dasharray="3 4" stroke-width="1.2" />
+                          <path d="M70 96C52 92 40 76 42 56C58 58 69 72 70 96Z" fill="#5D8A6B" fill-opacity="0.82" />
+                          <path d="M70 96C58 82 51 70 46 60" stroke="#1B352C" stroke-opacity="0.4" stroke-width="1.2" stroke-linecap="round" />
+                          <path d="M70 96C88 90 100 72 96 52C80 56 70 72 70 96Z" fill="#2E5A44" fill-opacity="0.88" />
+                          <path d="M70 96C81 80 88 68 92 58" stroke="#F8F6F1" stroke-opacity="0.45" stroke-width="1.2" stroke-linecap="round" />
+                          <path d="M70 30C70 30 57 48 57 57C57 64.2 62.8 70 70 70C77.2 70 83 64.2 83 57C83 48 70 30 70 30Z" fill="#FFFFFF" fill-opacity="0.94" stroke="#1B352C" stroke-opacity="0.25" stroke-width="1.4" />
+                          <path d="M65 55C65 51 67.5 47.5 70 44" stroke="#C59B5F" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                      </div>
+
+                      <div class="relative z-10 pb-1">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-forest text-ivory text-[11px] font-bold tracking-wider uppercase shadow-sm">
+                          + 100 Receitas Coreanas
+                        </span>
+                        <p class="text-[10px] text-forest-muted mt-2.5 tracking-wide">Edição Digital em PDF • Acesso Imediato</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================================================================
+         3. SEÇÃO DE IDENTIFICAÇÃO / ERROS SILENCIOSOS
+    ====================================================================== -->
+    <section class="py-14 sm:py-20 bg-white border-y border-sage-light">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12 reveal">
+          <p class="text-xs font-bold tracking-[0.18em] uppercase text-champagne mb-2">
+            O Que Ninguém Te Conta
+          </p>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-forest leading-tight">
+            Por que a maioria das rotinas não dá resultado?
+          </h2>
+          <p class="text-sm sm:text-base text-forest-muted mt-3 leading-relaxed">
+            Quase sempre o problema não é falta de dinheiro — são pequenos hábitos diários que enfraquecem a barreira natural da pele sem você perceber.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+          <!-- Erro 1 -->
+          <article class="reveal bg-ivory border border-sage-border/70 rounded-2xl p-5 sm:p-6 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sage-light text-forest flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-forest text-base mb-1.5">Esfregar a toalha no rosto após o banho</h3>
+              <p class="text-sm text-forest-muted leading-relaxed">
+                O atrito constante da toalha áspera agride a barreira protetora, provoca microirritações, favorece espinhas e rouba o viço. Na K-Beauty, a secagem é feita com leves batidinhas e a regra dos 3 segundos.
+              </p>
+            </div>
+          </article>
+
+          <!-- Erro 2 -->
+          <article class="reveal bg-ivory border border-sage-border/70 rounded-2xl p-5 sm:p-6 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sage-light text-forest flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-forest text-base mb-1.5">Usar receitas caseiras sem critério</h3>
+              <p class="text-sm text-forest-muted leading-relaxed">
+                Passar excesso de bicarbonato puro ou ingredientes agressivos desequilibra o pH ácido natural da pele, causando ressecamento, ardência e efeito rebote de oleosidade.
+              </p>
+            </div>
+          </article>
+
+          <!-- Erro 3 -->
+          <article class="reveal bg-ivory border border-sage-border/70 rounded-2xl p-5 sm:p-6 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sage-light text-forest flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-forest text-base mb-1.5">Comprar produtos caros errados para a sua pele</h3>
+              <p class="text-sm text-forest-muted leading-relaxed">
+                Copiar frascos virais da internet sem entender se sua pele é oleosa, mista, seca ou sensível só faz você gastar dinheiro à toa e acumular potes parados no banheiro.
+              </p>
+            </div>
+          </article>
+
+          <!-- Erro 4 -->
+          <article class="reveal bg-ivory border border-sage-border/70 rounded-2xl p-5 sm:p-6 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sage-light text-forest flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-forest text-base mb-1.5">Aplicar camadas na ordem incorreta</h3>
+              <p class="text-sm text-forest-muted leading-relaxed">
+                Passar creme pesado antes da hidratação aquosa ou dormir sem fazer limpeza dupla impede a absorção correta dos ativos e deixa a pele opaca e obstruída.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. SEÇÃO "O QUE VOCÊ VAI RECEBER DENTRO DO GUIA" (6 CARDS)
+    ====================================================================== -->
+    <section class="py-14 sm:py-20 bg-ivory">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14 reveal">
+          <p class="text-xs font-bold tracking-[0.18em] uppercase text-champagne mb-2">
+            Conteúdo Completo em PDF
+          </p>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-[2.7rem] font-bold text-forest leading-tight">
+            O que você vai receber dentro do guia
+          </h2>
+          <p class="text-sm sm:text-base text-forest-muted mt-3 leading-relaxed">
+            Um manual direto ao ponto, organizado para você ler no celular e aplicar já na rotina de hoje.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          <!-- Card 1 -->
+          <div class="reveal bg-white rounded-3xl p-6 border border-sage-border/75 shadow-soft flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-sage-light text-forest flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-champagne mb-1">Módulo 01</span>
+            <h3 class="font-serif text-2xl font-bold text-forest leading-snug mb-2">
+              Filosofia K-Beauty &amp; os 7 Erros Silenciosos
+            </h3>
+            <p class="text-sm text-forest-muted leading-relaxed">
+              Entenda os 4 pilares do verdadeiro <em>glass skin</em> e elimine os 7 hábitos comuns que destroem a barreira cutânea e tiram o brilho natural do rosto.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="reveal bg-white rounded-3xl p-6 border border-sage-border/75 shadow-soft flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-sage-light text-forest flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+              </svg>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-champagne mb-1">Módulo 02</span>
+            <h3 class="font-serif text-2xl font-bold text-forest leading-snug mb-2">
+              Rotinas Diárias Passo a Passo
+            </h3>
+            <p class="text-sm text-forest-muted leading-relaxed">
+              Ordem exata de manhã e à noite — em versão essencial e completa — com limpeza dupla e adaptações práticas para pele oleosa, seca, mista e sensível.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="reveal bg-white rounded-3xl p-6 border border-sage-border/75 shadow-soft flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-sage-light text-forest flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+              </svg>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-champagne mb-1">Módulo 03</span>
+            <h3 class="font-serif text-2xl font-bold text-forest leading-snug mb-2">
+              +100 Receitas Coreanas Numeradas
+            </h3>
+            <p class="text-sm text-forest-muted leading-relaxed">
+              Da receita 01 à 100 divididas em 10 blocos temáticos: águas de arroz, tônicos, máscaras, compressas, cuidados com lábios, olhos, cabelos e chás coreanos.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="reveal bg-white rounded-3xl p-6 border border-sage-border/75 shadow-soft flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-sage-light text-forest flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-champagne mb-1">Módulo 04</span>
+            <h3 class="font-serif text-2xl font-bold text-forest leading-snug mb-2">
+              Segredos Acessíveis &amp; Segurança Dermatológica
+            </h3>
+            <p class="text-sm text-forest-muted leading-relaxed">
+              Técnica de <em>slugging</em> noturno com Vaseline, limpeza gentil acessível estilo Johnson's Baby, alertas claros sobre o uso do bicarbonato e protocolo de <em>patch test</em>.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="reveal bg-white rounded-3xl p-6 border border-sage-border/75 shadow-soft flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-sage-light text-forest flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-champagne mb-1">Módulo 05</span>
+            <h3 class="font-serif text-2xl font-bold text-forest leading-snug mb-2">
+              Plano Prático de 28 Dias + Checklist Diário
+            </h3>
+            <p class="text-sm text-forest-muted leading-relaxed">
+              Roteiro progressivo de 4 semanas alinhado ao ciclo natural de renovação da pele para você construir constância sem confusão ou excesso de passos.
+            </p>
+          </div>
+
+          <!-- Card 6 (Bônus) -->
+          <div class="reveal bg-gradient-to-br from-sage-light to-white rounded-3xl p-6 border-2 border-champagne/60 shadow-soft flex flex-col relative">
+            <span class="absolute top-4 right-4 bg-forest text-ivory text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">
+              Bônus Incluso
+            </span>
+            <div class="w-12 h-12 rounded-2xl bg-white text-forest flex items-center justify-center mb-4 shadow-sm">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" />
+              </svg>
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-champagne mb-1">Presente Extra</span>
+            <h3 class="font-serif text-2xl font-bold text-forest leading-snug mb-2">
+              Vitrine Pronta de Produtos Recomendados
+            </h3>
+            <p class="text-sm text-forest-muted leading-relaxed">
+              Acesso clicável direto dentro do PDF à nossa curadoria atualizada de produtos acessíveis, acessórios de skincare e clássicos coreanos — sem perder tempo procurando.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. SEÇÃO INTERATIVA: EXPLORE OS 10 BLOCOS DAS +100 RECEITAS COREANAS
+    ====================================================================== -->
+    <section id="receitas" class="py-14 sm:py-20 bg-sage-light/65 border-y border-sage-border/70">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+          <p class="text-xs font-bold tracking-[0.18em] uppercase text-champagne mb-2">
+            Por Dentro das 100 Receitas
+          </p>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-[2.7rem] font-bold text-forest leading-tight">
+            Explore os 10 Blocos das +100 Receitas Coreanas
+          </h2>
+          <p class="text-sm sm:text-base text-forest-muted mt-3">
+            Toque em cada bloco abaixo para ver uma prévia do que você vai encontrar numerado passo a passo dentro do e-book.
+          </p>
+        </div>
+
+        <!-- Grade Interativa de Cards Expansíveis (gerenciada via JS para máxima leveza e acessibilidade) -->
+        <div id="recipe-blocks-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4">
+          <!-- Os 10 blocos são renderizados via JavaScript com estrutura semântica e acessível -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. SEÇÃO DE OFERTA (CARD DE CHECKOUT DESTACADO)
+    ====================================================================== -->
+    <section id="oferta" class="py-16 sm:py-24 bg-ivory relative overflow-hidden">
+      <div class="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 w-[540px] h-[540px] rounded-full bg-sage-mid/45 blur-3xl"></div>
+
+      <div class="relative max-w-2xl mx-auto px-5 sm:px-8">
+        <div class="reveal bg-white rounded-[2rem] border-2 border-forest/15 shadow-soft overflow-hidden">
+          <!-- Cabeçalho do Card de Oferta -->
+          <div class="bg-forest text-ivory px-6 py-6 sm:px-10 sm:py-7 text-center">
+            <span class="inline-block px-3 py-1 rounded-full bg-champagne/20 border border-champagne/50 text-champagne-light text-[11px] font-bold uppercase tracking-[0.16em] mb-2.5">
+              Condição Especial de Lançamento
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+              Comece Sua Rotina <em>Glass Skin</em> Hoje Mesmo
+            </h2>
+            <p class="text-sm text-sage-light/90 mt-1.5">
+              Tudo reunido em um único guia digital leve e pronto para usar no celular.
+            </p>
+          </div>
+
+          <!-- Corpo do Card -->
+          <div class="p-6 sm:p-10">
+            <!-- Checklist do que acompanha -->
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-forest-muted mb-4">
+              Veja tudo o que você leva agora:
+            </p>
+            <ul class="space-y-3 mb-8 text-sm sm:text-[15px] text-forest">
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-light text-cta flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <span><strong>E-book Completo em PDF:</strong> O Segredo da Beleza Coreana (leitura fácil no celular ou PC)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-light text-cta flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <span><strong>Rotinas Diárias Passo a Passo</strong> (manhã e noite) para pele oleosa, mista, seca e sensível</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-light text-cta flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <span><strong>+100 Receitas Coreanas Numeradas</strong> divididas em 10 blocos temáticos completos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-light text-cta flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <span><strong>Guia de Produtos Acessíveis &amp; Segurança</strong> (Vaseline, limpeza suave, alertas de bicarbonato e <em>patch test</em>)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-light text-cta flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <span><strong>Plano Prático de 28 Dias + Checklist Diário</strong> de hábitos coreanos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-champagne/20 text-champagne flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <span><strong>BÔNUS:</strong> Acesso clicável à Vitrine Oficial de Produtos Recomendados direto no PDF</span>
+              </li>
+            </ul>
+
+            <!-- Caixa de Preço Destacada -->
+            <div class="bg-ivory border border-sage-border rounded-2xl p-5 text-center mb-6">
+              <p class="text-sm text-forest-muted line-through font-medium">De R$ 47,00</p>
+              <p class="text-xs font-bold uppercase tracking-widest text-cta mt-1">Por apenas</p>
+              <p class="font-serif text-5xl sm:text-6xl font-bold text-forest leading-none my-1">
+                R$ 19,00
+              </p>
+              <p class="text-xs sm:text-sm text-forest-muted font-medium">
+                Pagamento único • Sem mensalidades • Acesso vitalício ao PDF
+              </p>
+            </div>
+
+            <!-- Botão CTA Principal da Oferta -->
+            <a
+              href="https://pay.cakto.com.br/38v3qjk_1357210"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-sheen w-full inline-flex items-center justify-center gap-2.5 bg-cta hover:bg-cta-hover active:scale-[0.99] text-white font-extrabold text-base sm:text-lg tracking-wide py-4 px-6 rounded-2xl shadow-cta transition-all duration-200 text-center"
+            >
+              <span>QUERO MEU ACESSO AGORA — R$ 19,00</span>
+              <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+
+            <!-- Badges de Pagamento e Segurança -->
+            <div class="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-center">
+              <div class="rounded-xl bg-sage-light/60 border border-sage-border/60 py-2.5 px-3 flex items-center justify-center gap-1.5 text-xs font-semibold text-forest">
+                <svg class="w-4 h-4 text-cta shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>Pix com liberação na hora</span>
+              </div>
+              <div class="rounded-xl bg-sage-light/60 border border-sage-border/60 py-2.5 px-3 flex items-center justify-center gap-1.5 text-xs font-semibold text-forest">
+                <svg class="w-4 h-4 text-cta shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                </svg>
+                <span>Cartão de Crédito</span>
+              </div>
+              <div class="rounded-xl bg-sage-light/60 border border-sage-border/60 py-2.5 px-3 flex items-center justify-center gap-1.5 text-xs font-semibold text-forest">
+                <svg class="w-4 h-4 text-cta shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                </svg>
+                <span>Checkout Seguro Cakto</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         7. SEÇÃO DE GARANTIA INCONDICIONAL DE 7 DIAS
+    ====================================================================== -->
+    <section class="py-12 sm:py-16 bg-white border-y border-sage-light">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <div class="reveal bg-ivory border border-champagne/50 rounded-3xl p-6 sm:p-10 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 text-center sm:text-left">
+          <!-- Selo Visual Minimalista de 7 Dias -->
+          <div class="shrink-0">
+            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white border-2 border-champagne flex flex-col items-center justify-center shadow-soft relative">
+              <div class="absolute inset-1.5 rounded-full border border-dashed border-champagne/60"></div>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-champagne">Garantia</span>
+              <span class="font-serif text-4xl font-bold text-forest leading-none my-0.5">7 Dias</span>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-forest-muted">Risco Zero</span>
+            </div>
+          </div>
+
+          <!-- Texto da Garantia -->
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-forest mb-2">
+              Garantia Incondicional de 7 Dias — Risco Zero para Você
+            </h2>
+            <p class="text-sm sm:text-base text-forest-muted leading-relaxed">
+              Baixe o e-book, leia as rotinas, explore as 100 receitas coreanas e avalie tudo com calma. Se dentro de <strong class="text-forest">7 dias corridos</strong> você achar que o material não fez sentido para você, basta solicitar o reembolso direto pela plataforma e devolvemos 100% do seu valor, sem burocracia e sem perguntas difíceis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         8. SEÇÃO FAQ (PERGUNTAS FREQUENTES EM ACORDEÃO INTERATIVO)
+    ====================================================================== -->
+    <section id="faq" class="py-14 sm:py-20 bg-ivory">
+      <div class="max-w-3xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-10 reveal">
+          <p class="text-xs font-bold tracking-[0.18em] uppercase text-champagne mb-2">
+            Tire Suas Dúvidas
+          </p>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest">
+            Perguntas Frequentes
+          </h2>
+        </div>
+
+        <div class="space-y-3 reveal" id="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="bg-white rounded-2xl border border-sage-border/80 overflow-hidden shadow-sm">
+            <button
+              type="button"
+              class="accordion-btn w-full px-5 py-4 sm:px-6 sm:py-5 text-left flex items-center justify-between gap-4 font-bold text-forest text-sm sm:text-base hover:bg-sage-light/30 transition-colors"
+              aria-expanded="true"
+              aria-controls="faq-panel-1"
+            >
+              <span>Como recebo o e-book após o pagamento?</span>
+              <svg class="accordion-chevron w-5 h-5 text-forest-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div id="faq-panel-1" class="px-5 pb-5 sm:px-6 text-sm text-forest-muted leading-relaxed">
+              Assim que o pagamento for confirmado (no Pix a aprovação acontece em segundos), a plataforma Cakto envia automaticamente um e-mail com o link direto para você baixar o arquivo PDF. Basta conferir sua caixa de entrada ou a pasta de spam/promoções.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-white rounded-2xl border border-sage-border/80 overflow-hidden shadow-sm">
+            <button
+              type="button"
+              class="accordion-btn w-full px-5 py-4 sm:px-6 sm:py-5 text-left flex items-center justify-between gap-4 font-bold text-forest text-sm sm:text-base hover:bg-sage-light/30 transition-colors"
+              aria-expanded="false"
+              aria-controls="faq-panel-2"
+            >
+              <span>Preciso comprar produtos coreanos caros para aplicar o guia?</span>
+              <svg class="accordion-chevron w-5 h-5 text-forest-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div id="faq-panel-2" class="hidden px-5 pb-5 sm:px-6 text-sm text-forest-muted leading-relaxed">
+              Não! O guia foi criado justamente para mostrar como conquistar o efeito <em>glass skin</em> gastando pouco — usando ingredientes naturais acessíveis (como arroz, chá verde, aveia, babosa e mel) e alternativas econômicas de farmácia (como Vaseline e limpeza gentil estilo Johnson's Baby), além de trazer opções coreanas caso você queira investir depois.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-white rounded-2xl border border-sage-border/80 overflow-hidden shadow-sm">
+            <button
+              type="button"
+              class="accordion-btn w-full px-5 py-4 sm:px-6 sm:py-5 text-left flex items-center justify-between gap-4 font-bold text-forest text-sm sm:text-base hover:bg-sage-light/30 transition-colors"
+              aria-expanded="false"
+              aria-controls="faq-panel-3"
+            >
+              <span>O método serve para pele oleosa, seca, mista ou sensível?</span>
+              <svg class="accordion-chevron w-5 h-5 text-forest-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div id="faq-panel-3" class="hidden px-5 pb-5 sm:px-6 text-sm text-forest-muted leading-relaxed">
+              Sim. O Capítulo 2 traz um quadro prático para você identificar seu tipo de pele e adaptar os passos da rotina, além de sinalizar cada uma das 100 receitas conforme a indicação (oleosa, mista, seca, sensível ou normal) com protocolo de teste de sensibilidade antes do uso.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-white rounded-2xl border border-sage-border/80 overflow-hidden shadow-sm">
+            <button
+              type="button"
+              class="accordion-btn w-full px-5 py-4 sm:px-6 sm:py-5 text-left flex items-center justify-between gap-4 font-bold text-forest text-sm sm:text-base hover:bg-sage-light/30 transition-colors"
+              aria-expanded="false"
+              aria-controls="faq-panel-4"
+            >
+              <span>Serve tanto para homens quanto para mulheres?</span>
+              <svg class="accordion-chevron w-5 h-5 text-forest-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div id="faq-panel-4" class="hidden px-5 pb-5 sm:px-6 text-sm text-forest-muted leading-relaxed">
+              Com certeza. Os princípios da K-Beauty — limpeza gentil, hidratação em camadas, proteção da barreira cutânea e protetor solar — funcionam para qualquer pessoa que queira uma pele mais limpa, calma, macia e com viço natural.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="bg-white rounded-2xl border border-sage-border/80 overflow-hidden shadow-sm">
+            <button
+              type="button"
+              class="accordion-btn w-full px-5 py-4 sm:px-6 sm:py-5 text-left flex items-center justify-between gap-4 font-bold text-forest text-sm sm:text-base hover:bg-sage-light/30 transition-colors"
+              aria-expanded="false"
+              aria-controls="faq-panel-5"
+            >
+              <span>Posso ler o e-book direto no meu celular?</span>
+              <svg class="accordion-chevron w-5 h-5 text-forest-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div id="faq-panel-5" class="hidden px-5 pb-5 sm:px-6 text-sm text-forest-muted leading-relaxed">
+              Sim! O arquivo é entregue em formato PDF leve e organizado, compatível com qualquer celular (Android ou iPhone), tablet ou computador — inclusive offline depois que você baixar, com links clicáveis para a vitrine de produtos.
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Final após o FAQ -->
+        <div class="mt-10 text-center reveal">
+          <a
+            href="https://pay.cakto.com.br/38v3qjk_1357210"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-sheen inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white font-extrabold text-base py-4 px-8 rounded-2xl shadow-cta transition-all duration-200 w-full sm:w-auto"
+          >
+            <span>QUERO MEU ACESSO AGORA — R$ 19,00</span>
+            <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       9. RODAPÉ LIMPO E AVISO TRANSPARENTE
+  ====================================================================== -->
+  <footer class="bg-forest text-sage-light/85 py-10 px-5 sm:px-8 border-t border-champagne/25">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <p class="font-serif text-xl sm:text-2xl font-semibold text-ivory">
+        O Segredo da Beleza Coreana
+      </p>
+      <p class="text-xs leading-relaxed text-sage-light/75 max-w-2xl mx-auto">
+        <strong>Aviso Importante:</strong> Este e-book tem caráter exclusivamente educativo, informativo e de cuidados cosméticos preventivos no dia a dia. Ele não substitui consulta, diagnóstico ou tratamento dermatológico individualizado. Em casos de acne moderada a grave, melasma persistente, rosácea ativa, feridas ou alergias cutâneas, procure sempre um médico dermatologista. Os resultados variam conforme o tipo de pele e a constância de cada pessoa.
+      </p>
+      <div class="pt-3 border-t border-white/10 text-[11px] text-sage-light/60">
+        &copy; <span id="current-year">2026</span> O Segredo da Beleza Coreana • Todos os direitos reservados • Pagamento processado com segurança via Cakto.
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       10. BARRA FIXA INFERIOR NO CELULAR (STICKY MOBILE CTA)
+       Aparece suavemente quando o visitante rola além do Hero
+  ====================================================================== -->
+  <aside
+    id="sticky-mobile-cta"
+    aria-label="Acesso rápido à oferta"
+    class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-t border-sage-border px-4 py-3 shadow-[0_-8px_24px_rgba(27,53,44,0.12)] translate-y-full opacity-0 pointer-events-none transition-all duration-300"
+  >
+    <div class="max-w-lg mx-auto flex items-center justify-between gap-3">
+      <div class="leading-tight">
+        <span class="block text-[11px] text-forest-muted line-through">De R$ 47,00</span>
+        <span class="font-serif text-2xl font-bold text-forest">R$ 19,00</span>
+        <span class="block text-[10px] font-semibold text-cta">Pix ou Cartão • PDF</span>
+      </div>
+      <a
+        href="https://pay.cakto.com.br/38v3qjk_1357210"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-sheen flex-1 max-w-[220px] inline-flex items-center justify-center bg-cta hover:bg-cta-hover active:scale-[0.98] text-white font-extrabold text-xs sm:text-sm tracking-wide py-3.5 px-4 rounded-xl shadow-cta transition-all text-center"
+      >
+        QUERO ACESSO AGORA
+      </a>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       JAVASCRIPT EMBUTIDO (Fallback da Capa, 10 Blocos Interativos, FAQ,
+       Animações ao Rolar e Barra Fixa Mobile)
+  ====================================================================== -->
+  <script>
+    /**
+     * Fallback automático da capa:
+     * Se o arquivo local "capa.jpg" não existir na mesma pasta ou falhar ao carregar,
+     * oculta a tag <img> e exibe a capa vetorial/CSS minimalista botânica.
+     */
+    function handleCoverFallback(imgEl) {
+      try {
+        if (!imgEl || !imgEl.parentElement) return;
+        imgEl.style.display = 'none';
+        const fallback = imgEl.parentElement.querySelector('.js-cover-fallback');
+        if (fallback) {
+          fallback.classList.remove('hidden');
+        }
+      } catch (err) {
+        console.error('Erro ao aplicar fallback da capa:', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      /* 1. Verifica imagens da capa que já possam ter falhado antes do listener */
+      try {
+        document.querySelectorAll('.js-cover-img').forEach(function (img) {
+          if (img.complete && img.naturalWidth === 0) {
+            handleCoverFallback(img);
+          }
+        });
+      } catch (err) {
+        console.error('Erro na verificação inicial da capa:', err);
+      }
+
+      /* 2. Atualiza ano no rodapé */
+      try {
+        const yearEl = document.getElementById('current-year');
+        if (yearEl) {
+          yearEl.textContent = String(new Date().getFullYear());
+        }
+      } catch (err) {
+        console.error('Erro ao definir ano:', err);
+      }
+
+      /* 3. Renderiza os 10 Blocos Interativos das +100 Receitas Coreanas */
+      const recipeBlocks = [
+        {
+          num: '01',
+          range: 'Receitas 01 a 10',
+          title: 'Águas de Arroz e Tônicos',
+          summary: 'A base do efeito pele de vidro (glass skin) para hidratar em camadas leves e uniformizar o toque.',
+          examples: [
+            'Água de Arroz Clássica e Cozida Emoliente',
+            'Tônico de Chá Verde Gelado para poros e brilho',
+            'Tônicos calmantes de Camomila, Calêndula e Água de Rosas'
+          ]
+        },
+        {
+          num: '02',
+          range: 'Receitas 11 a 20',
+          title: 'Máscaras de Luminosidade',
+          summary: 'Preparos semanais para devolver viço imediato, maciez e aparência descansada ao rosto.',
+          examples: [
+            'Máscara Coreana de Arroz e Mel Puro',
+            'Máscara Antioxidante de Matcha e Iogurte',
+            'Gel de Linhaça com efeito tensor natural'
+          ]
+        },
+        {
+          num: '03',
+          range: 'Receitas 21 a 30',
+          title: 'Máscaras Calmantes',
+          summary: 'Alívio para dias de vermelhidão, ressecamento, frio ou sensibilidade pós-barbear e pós-sol.',
+          examples: [
+            'Máscara SOS de Aveia Coloidal e Camomila',
+            'Máscara Gelada de Pepino e Babosa (Aloe Vera)',
+            'Ritual Noturno de Slugging Coreano com Vaseline'
+          ]
+        },
+        {
+          num: '04',
+          range: 'Receitas 31 a 40',
+          title: 'Controle de Oleosidade',
+          summary: 'Equilíbrio de brilho e cuidado da Zona T sem ressecar ou causar efeito rebote.',
+          examples: [
+            'Detox suave de Argila Branca e Chá Verde',
+            'Gel leve Oil-Free de Pepino e Chá Branco',
+            'Limpeza pontual controlada da Zona T com alertas de pH'
+          ]
+        },
+        {
+          num: '05',
+          range: 'Receitas 41 a 50',
+          title: 'Limpeza e Esfoliantes Gentis',
+          summary: 'Óleos para limpeza dupla noturna e renovação suave sem agredir a barreira cutânea.',
+          examples: [
+            'Óleo de Limpeza de Jojoba e Camélia',
+            'Espuma gentil acessível estilo Johnson’s Baby + Chá Verde',
+            'Esfoliantes ultrassuaves de Arroz, Mamão e Aveia'
+          ]
+        },
+        {
+          num: '06',
+          range: 'Receitas 51 a 60',
+          title: 'Compressas e Sheet Masks Caseiras',
+          summary: 'Protocolos rápidos de 3 a 5 minutos para brilho instantâneo e desinchaço facial.',
+          examples: [
+            'Sheet Mask de algodão com Água de Arroz gelada',
+            'Compressas de Chá Verde e Camomila para olheiras',
+            'Brumas faciais refrescantes e terapia com toalha morna'
+          ]
+        },
+        {
+          num: '07',
+          range: 'Receitas 61 a 70',
+          title: 'Lábios, Olhos, Pescoço e Mãos',
+          summary: 'Os detalhes que completam a estética coreana cuidada da cabeça aos pés.',
+          examples: [
+            'Lip Slugging Noturno com Mel e Vaseline',
+            'Gel refrescante para contorno dos olhos',
+            'Hidratação de pescoço, colo, mãos e cutículas'
+          ]
+        },
+        {
+          num: '08',
+          range: 'Receitas 71 a 80',
+          title: 'Cabelos K-Hair',
+          summary: 'Cuidados inspirados na Coreia para couro cabeludo saudável e fios soltos com brilho.',
+          examples: [
+            'Enxágue de Água de Arroz e Alecrim revitalizante',
+            'Pré-shampoo nutritivo de Óleo de Camélia',
+            'Gel finalizador natural de Linhaça antifrizz'
+          ]
+        },
+        {
+          num: '09',
+          range: 'Receitas 81 a 90',
+          title: 'Chás Coreanos Tradicionais',
+          summary: 'Hidratação interna diária e antioxidantes tradicionais para beleza de dentro para fora.',
+          examples: [
+            'Boricha (Chá de Cevada Torrada) e Nokcha (Chá Verde)',
+            'Yujacha adaptado, Saenggangcha e Chá de Milho',
+            'Infusão noturna para apoiar o sono reparador'
+          ]
+        },
+        {
+          num: '10',
+          range: 'Receitas 91 a 100',
+          title: 'Receitas Funcionais para o Glow',
+          summary: 'Pratos leves e smoothies inspirados na mesa coreana para nutrir a elasticidade da pele.',
+          examples: [
+            'Miyeok-guk (Sopa de Algas) e Hobak-juk (Creme de Abóbora)',
+            'Oi Muchim (Salada de Pepino) e Heukimja Latte',
+            'Smoothies antioxidantes de Matcha e Frutas Vermelhas'
+          ]
+        }
+      ];
+
+      try {
+        const grid = document.getElementById('recipe-blocks-grid');
+        if (grid) {
+          recipeBlocks.forEach(function (block, idx) {
+            const isFirst = idx === 0;
+            const panelId = 'recipe-panel-' + block.num;
+
+            const card = document.createElement('div');
+            card.className = 'reveal bg-white rounded-2xl border border-sage-border/80 shadow-sm overflow-hidden transition-shadow hover:shadow-soft';
+
+            const examplesHtml = block.examples
+              .map(function (item) {
+                return (
+                  '<li class="flex items-start gap-2 text-xs sm:text-sm text-forest-muted">' +
+                    '<span class="text-champagne font-bold mt-0.5">•</span>' +
+                    '<span>' + item + '</span>' +
+                  '</li>'
+                );
+              })
+              .join('');
+
+            card.innerHTML =
+              '<button type="button" class="accordion-btn w-full p-4 sm:p-5 text-left flex items-center justify-between gap-3 hover:bg-sage-light/30 transition-colors" aria-expanded="' + (isFirst ? 'true' : 'false') + '" aria-controls="' + panelId + '">' +
+                '<div class="flex items-center gap-3.5 min-w-0">' +
+                  '<span class="w-10 h-10 rounded-xl bg-sage-light text-forest font-serif text-xl font-bold flex items-center justify-center shrink-0">' +
+                    block.num +
+                  '</span>' +
+                  '<div class="min-w-0">' +
+                    '<span class="block text-[10px] font-bold uppercase tracking-widest text-champagne">' + block.range + '</span>' +
+                    '<h3 class="font-bold text-forest text-sm sm:text-base leading-snug">' + block.title + '</h3>' +
+                  '</div>' +
+                '</div>' +
+                '<svg class="accordion-chevron w-5 h-5 text-forest-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">' +
+                  '<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />' +
+                '</svg>' +
+              '</button>' +
+              '<div id="' + panelId + '" class="' + (isFirst ? '' : 'hidden ') + 'px-4 pb-5 sm:px-5 pt-1 border-t border-sage-light/80 bg-ivory/40">' +
+                '<p class="text-xs sm:text-sm text-forest font-medium mb-2.5 leading-relaxed">' + block.summary + '</p>' +
+                '<ul class="space-y-1.5">' + examplesHtml + '</ul>' +
+              '</div>';
+
+            grid.appendChild(card);
+          });
+        }
+      } catch (err) {
+        console.error('Erro ao montar blocos de receitas:', err);
+      }
+
+      /* 4. Controle unificado de todos os acordeões (Blocos de Receitas e FAQ) */
+      try {
+        document.querySelectorAll('.accordion-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const targetId = btn.getAttribute('aria-controls');
+            const panel = targetId ? document.getElementById(targetId) : null;
+            if (!panel) return;
+
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!isExpanded));
+            panel.classList.toggle('hidden', isExpanded);
+          });
+        });
+      } catch (err) {
+        console.error('Erro nos acordeões:', err);
+      }
+
+      /* 5. Animações sutis de entrada ao rolar com IntersectionObserver */
+      try {
+        const revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+          const revealObserver = new IntersectionObserver(
+            function (entries, observer) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+          );
+          revealEls.forEach(function (el) {
+            revealObserver.observe(el);
+          });
+        } else {
+          revealEls.forEach(function (el) {
+            el.classList.add('is-visible');
+          });
+        }
+      } catch (err) {
+        console.error('Erro no IntersectionObserver de revelação:', err);
+      }
+
+      /* 6. Controle da Barra Fixa Mobile (Sticky Mobile CTA) após passar do Hero */
+      try {
+        const heroEl = document.getElementById('hero');
+        const stickyBar = document.getElementById('sticky-mobile-cta');
+        if (heroEl && stickyBar && 'IntersectionObserver' in window) {
+          const stickyObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                const showSticky = !entry.isIntersecting;
+                stickyBar.classList.toggle('translate-y-full', !showSticky);
+                stickyBar.classList.toggle('opacity-0', !showSticky);
+                stickyBar.classList.toggle('pointer-events-none', !showSticky);
+              });
+            },
+            { threshold: 0.05 }
+          );
+          stickyObserver.observe(heroEl);
+        }
+      } catch (err) {
+        console.error('Erro no controle da barra fixa mobile:', err);
+      }
+    });
+  </script>
+</body>
+</html>
